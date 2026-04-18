@@ -1,0 +1,77 @@
+name: Deploy Astro site to GitHub Pages
+
+on:
+  # 监听 publish 分支的 push 事件触发部署
+  push:
+    branches: [ publish ]
+  # 允许在 GitHub Actions 控制台手动触发
+  workflow_dispatch:
+
+# 允许同一个 group 内的任务取消正在进行中的旧任务，以保证部署最新内容
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# 授予 GitHub Actions 写入 Pages 和生成身份令牌的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+env:
+  BUILD_PATH: "."
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 设置 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      # 匹配 astro-theme-anglefeint 对 Node.js 22.12.0+ 的硬性要求
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+          cache-dependency-path: ${{ env.BUILD_PATH }}/pnpm-lock.yaml
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+        working-directory: ${{ env.BUILD_PATH }}
+
+      - name: Build with Astro
+        # Astro 构建产物默认在 dist 目录
+        run: |
+          pnpm run build \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+        working-directory: ${{ env.BUILD_PATH }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_PATH }}/dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
