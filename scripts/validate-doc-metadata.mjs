@@ -92,7 +92,8 @@ const EXCLUDE_PREFIXES = [
   '.cursor/workflows/',
   '.cursor/skills/',
   '.git/',
-  'node_modules/',
+  'node_modules',
+  'packages/theme/node_modules',
   'dist/',
 ];
 
