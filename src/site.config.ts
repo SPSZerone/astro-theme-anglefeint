@@ -36,4 +36,17 @@ export const THEME_CONFIG = defineThemeConfig({
   //     },
   //   },
   // },
+
+  // SPS CUSTOM
+  site: {
+    title: 'Anglefeint - William Chen - 陈威 - SPS',
+    description: '',
+    url: 'https://anglefeint.me.seapianosnow.com',
+    author: 'William Chen - 陈威',
+    tagline:
+      'Powered by Astro(https://astro.build/) & Anglefeint(https://github.com/anglefeint/astro-theme-anglefeint).',
+  },
+  social: {
+    links: [{ href: 'https://github.com/SPSZerone', label: 'GitHub', icon: 'github' }],
+  },
 });
