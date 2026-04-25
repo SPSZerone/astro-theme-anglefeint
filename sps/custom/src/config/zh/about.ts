@@ -36,7 +36,7 @@ export const ABOUT_CONFIG: AboutConfig = {
   labels: {
     modalOutput: 'Output',
     modalClose: 'Close',
-    responseOutput: '输出',
+    responseOutput: '档案内容',
     contactEmailLead: '',
     contactConnectLead: '',
     backToTop: 'Back to top',
