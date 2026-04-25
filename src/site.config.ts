@@ -43,8 +43,7 @@ export const THEME_CONFIG = defineThemeConfig({
     description: '',
     url: 'https://anglefeint.me.seapianosnow.com',
     author: 'William Chen - 陈威',
-    tagline:
-      'Powered by Astro(https://astro.build/) & Anglefeint(https://github.com/anglefeint/astro-theme-anglefeint).',
+    tagline: 'Powered by Astro & Anglefeint theme',
   },
   social: {
     links: [{ href: 'https://github.com/SPSZerone', label: 'GitHub', icon: 'github' }],
