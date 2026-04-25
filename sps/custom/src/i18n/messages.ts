@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, type Locale } from '@/i18n/config';
+import { DEFAULT_LOCALE, type Locale } from '../../../../src/i18n/config';
 
 export type Messages = {
   siteTitle: string;
