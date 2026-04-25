@@ -4,6 +4,11 @@
  */
 import { defineThemeConfig } from './site.config.defaults.ts';
 
+import { local as localEN } from '../sps/custom/src/config/en/site.ts';
+import { local as localZH } from '../sps/custom/src/config/zh/site.ts';
+// import { local as localEN } from '@spscustom/config/en/site';
+// import { local as localZH } from '@spscustom/config/zh/site';
+
 export type {
   AboutConfig,
   LocaleCode,
@@ -63,53 +68,11 @@ export const THEME_CONFIG = defineThemeConfig({
       defaultLocalePrefix: 'never',
     },
     locales: {
-      en: {
-        meta: {
-          label: 'English',
-          hreflang: 'en',
-          ogLocale: 'en_US',
-          enabled: true,
-        },
-        site: {
-          hero: "I've been bringing games to life through code as a Full-Stack Game Developer since 2012.Beyond the screen, I'm deeply immersed in classical music—playing the piano ('13), violin ('17), and cello ('19).When I'm not at a keyboard or holding a bow, I'm chasing my next thrill through skydiving, cycling, running, and tennis.",
-        },
-        messages: {
-          nav: { home: 'Home' },
-        },
-        about: {
-          metaLine: '$ profile booted | mode: builder',
-        },
-      },
-      zh: {
-        meta: {
-          label: '中文',
-          hreflang: 'zh-CN',
-          ogLocale: 'zh_CN',
-          fallback: ['en'],
-          enabled: true,
-        },
-        site: {
-          hero: '我热爱编程，自 2012 年起便深耕于全栈游戏开发。在代码构建的世界之外，我痴迷于古典音乐，并长年研习钢琴（始于 2013）、小提琴（始于 2017）与大提琴（始于 2019）。此外，我也是一名户外与极限运动爱好者，热衷于跳伞、骑行、跑步和网球。',
-        },
-        about: {
-          metaLine: '$ profile booted | mode: builder',
-        },
-      },
-      ja: {
-        meta: {
-          enabled: false,
-        },
-      },
-      ko: {
-        meta: {
-          enabled: false,
-        },
-      },
-      es: {
-        meta: {
-          enabled: false,
-        },
-      },
+      en: localEN,
+      zh: localZH,
+      ja: { meta: { enabled: false } },
+      ko: { meta: { enabled: false } },
+      es: { meta: { enabled: false } },
     }, // end of locales
   },
 });
