@@ -89,7 +89,7 @@ export const DEFAULT_MESSAGES: Record<string, Messages> = {
       noPosts: 'No posts available in this language yet.',
     },
     about: {
-      title: 'About — Hacker Ethos',
+      title: 'About Me',
       description: 'Who I am, what I build, and the hacker ethos behind my work.',
       who: 'Who I Am',
       what: 'What I Build',
@@ -366,7 +366,7 @@ export const DEFAULT_MESSAGES: Record<string, Messages> = {
       noPosts: '该语言暂时没有文章。',
     },
     about: {
-      title: 'About — Hacker Ethos',
+      title: '关于我',
       description: '我是谁、我在做什么，以及背后的黑客精神。',
       who: '我是谁',
       what: '我在构建什么',
