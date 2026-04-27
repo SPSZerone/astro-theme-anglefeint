@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
-import { SITE_DESCRIPTION, SITE_TITLE, getSiteHero } from '@anglefeint/site-config/site';
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_AUTHOR, getSiteHero } from '@anglefeint/site-config/site';
 import { type Locale, blogIdToSlugAnyLocale, localePath } from '@anglefeint/site-i18n/config';
 import { getMessages } from '@anglefeint/site-i18n/messages';
 import MatrixShell from './shells/MatrixShell.astro';
@@ -18,7 +18,7 @@ const pageDescription = messages.siteDescription || SITE_DESCRIPTION;
 ---
 
 <MatrixShell locale={locale} title={SITE_TITLE} description={pageDescription}>
-  <h1>{SITE_TITLE}</h1>
+  <h1>{SITE_AUTHOR}</h1>
   <p class="home-hero-copy">{heroText}</p>
 
   <section class="home-latest">

@@ -44,7 +44,7 @@ export const THEME_CONFIG = defineThemeConfig({
 
   // SPS CUSTOM
   site: {
-    title: 'William Chen - 陈威',
+    title: 'Anglefeint - William Chen - 陈威 - SPS',
     description: '',
     url: 'https://anglefeint.me.seapianosnow.com',
     author: 'William Chen - 陈威',
