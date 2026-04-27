@@ -1,4 +1,6 @@
 ---
+import Audio from '@spscommon/scripts/audio/Audio.astro';
+
 import BaseHead from '../BaseHead.astro';
 import CommonHeader from './CommonHeader.astro';
 import CommonFooter from './CommonFooter.astro';
@@ -82,5 +84,6 @@ const messages = getMessages(locale);
     </main>
     <CommonFooter scanlines={scanlines} />
     <slot name="body-end" />
+    <Audio />
   </body>
 </html>

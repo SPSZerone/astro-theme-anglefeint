@@ -29,7 +29,7 @@ const pageDescription = messages.siteDescription || SITE_DESCRIPTION;
           latestPosts.map((post) => (
             <li>
               <a
-                class="home-post-title"
+                class="home-post-title tiks-success tiks-hover"
                 href={localePath(locale, `/blog/${blogIdToSlugAnyLocale(post.id)}`)}
               >
                 {post.data.title}
@@ -45,6 +45,6 @@ const pageDescription = messages.siteDescription || SITE_DESCRIPTION;
         )
       }
     </ul>
-    <p><a href={localePath(locale, '/blog/')}>{messages.home.viewAll}</a></p>
+    <p><a href={localePath(locale, '/blog/')} class="tiks-success tiks-hover">{messages.home.viewAll}</a></p>
   </section>
 </MatrixShell>

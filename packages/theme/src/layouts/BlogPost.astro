@@ -301,7 +301,7 @@ const hasCommentsConfig = Boolean(
       }
       <button
         type="button"
-        class="ai-regenerate"
+        class="ai-regenerate tiks-success tiks-hover"
         aria-label={messages.blog.regenerate}
         title={messages.blog.regenerate}>{messages.blog.regenerate}</button
       >
@@ -315,7 +315,7 @@ const hasCommentsConfig = Boolean(
           {related.map((p) => (
             <a
               href={localePath(resolvedLocale, `/blog/${blogIdToSlugAnyLocale(p.id)}`)}
-              class="ai-related-card"
+              class="ai-related-card tiks-success tiks-hover"
             >
               {p.data.heroImage ? (
                 <div class="ai-related-img">
@@ -337,7 +337,7 @@ const hasCommentsConfig = Boolean(
     )
   }
   <nav class="ai-back-to-blog" aria-label={messages.blog.backToBlogAria}>
-    <a href={localePath(resolvedLocale, '/blog/')}>
+    <a href={localePath(resolvedLocale, '/blog/')} class="tiks-success tiks-hover">
       <span class="ai-back-prompt">$</span>
       <span class="ai-back-text">← {messages.blog.backToBlog}</span>
     </a>

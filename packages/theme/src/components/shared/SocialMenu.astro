@@ -29,7 +29,7 @@ const resolvedLinks = links.length > 0 || !showPlaceholdersWhenEmpty ? links : p
   {
     resolvedLinks.map((link) =>
       links.length > 0 ? (
-        <a href={link.href} target="_blank" rel="noopener noreferrer">
+        <a href={link.href} target="_blank" rel="noopener noreferrer" class="tiks-success tiks-hover">
           <span class="sr-only">{link.label}</span>
           {link.icon ? <Icon name={link.icon} size={iconSize} /> : <span>{link.label}</span>}
         </a>

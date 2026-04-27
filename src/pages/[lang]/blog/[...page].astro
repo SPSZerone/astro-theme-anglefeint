@@ -102,7 +102,9 @@ const pageDescription =
       {
         posts.map((post, index) => (
           <li>
-            <a href={localePath(resolvedLocale, `/blog/${blogIdToSlugAnyLocale(post.id)}`)}>
+            <a href={localePath(resolvedLocale, `/blog/${blogIdToSlugAnyLocale(post.id)}`)}
+               class="tiks-success tiks-hover"
+            >
               {post.data.heroImage && (
                 <div class="img-wrapper">
                   <Image

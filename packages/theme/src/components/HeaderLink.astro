@@ -24,7 +24,7 @@ const isActive =
 	target === '/' ? pathname === '/' : pathname === target || (isSectionLink && pathname.startsWith(`${target}/`));
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
+<a href={href} class:list={[className, { active: isActive }, "tiks-success", "tiks-hover"]} {...props}>
 	<slot />
 </a>
 <style>
