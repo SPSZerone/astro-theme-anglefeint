@@ -1,5 +1,6 @@
 ---
 import Audio from '@spscommon/scripts/audio/Audio.astro';
+import Totoro from '@spscommon/components/effects/Totoro.astro';
 
 import BaseHead from '../BaseHead.astro';
 import CommonHeader from './CommonHeader.astro';
@@ -85,5 +86,6 @@ const messages = getMessages(locale);
     <CommonFooter scanlines={scanlines} />
     <slot name="body-end" />
     <Audio />
+    <Totoro />
   </body>
 </html>
