@@ -1,0 +1,65 @@
+:root {
+  --sps-hero-greeting-text-color: #3b82f6; /* 000000 3B82F6 */
+
+  --sps-hero-twe-arrow-color: #00ffff; /* 00AAAA 00FFFF */
+  --sps-hero-twe-text-color: #f1f5f9; /* 000000 F1F5F9 */
+  --sps-hero-twe-text-highlight-color: #b026ff; /* 6A0DAD B026FF */
+
+  --sps-hero-description-color-text: #ffffff; /* 000000 94A3B8 FFFFFF */
+
+  --sps-hero-btn-primary-text-color: #ffffff; /* FFFFFF FFFFFF */
+  --sps-hero-btn-secondary-text-color: #f1f5f9; /* 000000 F1F5F9 */
+
+  --sps-hero-section-title-text-color: #ffffff; /* 000000 FFFFFF */
+  --sps-hero-section-subtitle-text-color: #f1f5f9; /* 111111 F1F5F9 */
+
+  --sps-skill-category-bg-color: #1e293b; /* EEEEEE 1E293B */
+  --sps-skill-category-title-color: #ffffff; /* 000000 FFFFFF */
+  --sps-skill-tag-name-color: #f1f5f9; /* 111111 F1F5F9 */
+
+  --sps-blog-info-bg: #1e2532;
+  --sps-blog-info-border: rgba(255, 255, 255, 0.05);
+  --sps-blog-info-shadow: rgba(0, 0, 0, 0.2);
+
+  --sps-blog-info-title-color: #f8fafc;
+  --sps-blog-info-url-color: #7dd3fc;
+  --sps-blog-info-desc-color: #cbd5e1;
+
+  --sps-blog-info-label-color: #94a3b8;
+  --sps-blog-info-value-color: #e2e8f0;
+
+  --sps-blog-info-watermark-color: rgba(255, 255, 255, 0.03);
+}
+
+html.dark {
+  --sps-hero-greeting-text-color: #000000; /* 000000 3B82F6 */
+
+  --sps-hero-twe-arrow-color: #00ffff; /* 00AAAA 00FFFF */
+  --sps-hero-twe-text-color: #f1f5f9; /* 000000 F1F5F9 */
+  --sps-hero-twe-text-highlight-color: #b026ff; /* 6A0DAD B026FF */
+
+  --sps-hero-description-color-text: #ffffff; /* 000000 94A3B8 FFFFFF */
+
+  --sps-hero-btn-primary-text-color: #ffffff; /* FFFFFF FFFFFF */
+  --sps-hero-btn-secondary-text-color: #f1f5f9; /* 000000 F1F5F9 */
+
+  --sps-hero-section-title-text-color: #ffffff; /* 000000 FFFFFF */
+  --sps-hero-section-subtitle-text-color: #f1f5f9; /* AAAAAA F1F5F9 */
+
+  --sps-skill-category-bg-color: #1e293b; /* EEEEEE 1E293B */
+  --sps-skill-category-title-color: #ffffff; /* 000000 FFFFFF */
+  --sps-skill-tag-name-color: #f1f5f9; /* 111111 F1F5F9 */
+
+  --sps-blog-info-bg: #1e2532;
+  --sps-blog-info-border: rgba(255, 255, 255, 0.05);
+  --sps-blog-info-shadow: rgba(0, 0, 0, 0.2);
+
+  --sps-blog-info-title-color: #f8fafc;
+  --sps-blog-info-url-color: #7dd3fc;
+  --sps-blog-info-desc-color: #cbd5e1;
+
+  --sps-blog-info-label-color: #94a3b8;
+  --sps-blog-info-value-color: #e2e8f0;
+
+  --sps-blog-info-watermark-color: rgba(255, 255, 255, 0.03);
+}

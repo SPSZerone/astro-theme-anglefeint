@@ -1,4 +1,6 @@
 ---
+import License from '@spscommon/components/licenses/Blog.astro';
+
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import themeRedqueen1 from '../assets/theme/red-queen/theme-redqueen1.webp';
@@ -19,6 +21,7 @@ import {
 import { getMessages } from '@anglefeint/site-i18n/messages';
 
 type Props = CollectionEntry<'blog'>['data'] & {
+  blogId: string;
   locale?: string;
   related?: CollectionEntry<'blog'>[];
   localeHrefs?: Partial<Record<Locale, string>>;
@@ -27,6 +30,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 };
 
 const {
+  blogId,
   title,
   subtitle,
   description,
@@ -299,6 +303,13 @@ const hasCommentsConfig = Boolean(
           </div>
         )
       }
+      <License
+        title={title}
+        description={description}
+        blogUrl={localePath(resolvedLocale, `/blog/${blogIdToSlugAnyLocale(blogId)}`)}
+        pubDate={pubDate}
+        updatedDate={updatedDate}
+      />
       <button
         type="button"
         class="ai-regenerate tiks-success tiks-hover"

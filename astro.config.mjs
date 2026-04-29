@@ -10,6 +10,8 @@ import { DEFAULT_LOCALE, DEFAULT_LOCALE_PREFIX_MODE } from './src/i18n/config';
 
 const themeDefaultI18nEntry = resolveThemeDefaultI18nEntry(import.meta.url);
 
+import icon from 'astro-icon';
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,
@@ -26,6 +28,7 @@ export default defineConfig({
   },
   integrations: [
     mdx(),
+    icon(),
     sitemap({
       filter: (page) => {
         const path = new URL(page).pathname;
