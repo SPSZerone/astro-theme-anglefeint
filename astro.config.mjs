@@ -1,3 +1,4 @@
+/* global process */
 // @ts-check
 
 import mdx from '@astrojs/mdx';
@@ -10,10 +11,13 @@ import { DEFAULT_LOCALE, DEFAULT_LOCALE_PREFIX_MODE } from './src/i18n/config';
 
 const themeDefaultI18nEntry = resolveThemeDefaultI18nEntry(import.meta.url);
 
+const isDev = process.env.NODE_ENV === 'development';
+
 import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
+  trailingSlash: isDev ? 'ignore' : 'always',
   site: SITE_URL,
   vite: {
     resolve: {

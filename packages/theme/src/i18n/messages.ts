@@ -68,6 +68,10 @@ export type Messages = {
     toastP60: string;
     toastDone: string;
   };
+  page404: {
+    title: string;
+    description: string;
+  };
 };
 
 export const DEFAULT_MESSAGES: Record<string, Messages> = {
@@ -139,6 +143,11 @@ export const DEFAULT_MESSAGES: Record<string, Messages> = {
       toastP60: 'inference stable 60%',
       toastDone: 'output finalized',
     },
+    page404: {
+      title: 'Page Not Found',
+      description: 'Sorry, the page you visited does not exist or has been moved.',
+      backToHome: 'Back to Home',
+    },
   },
   ja: {
     siteTitle: 'Angle Feint',
@@ -208,6 +217,11 @@ export const DEFAULT_MESSAGES: Record<string, Messages> = {
       toastP60: '推論安定 60%',
       toastDone: '出力確定',
     },
+    page404: {
+      title: 'Page Not Found',
+      description: 'Sorry, the page you visited does not exist or has been moved.',
+      backToHome: 'Back to Home',
+    },
   },
   ko: {
     siteTitle: 'Angle Feint',
@@ -276,6 +290,11 @@ export const DEFAULT_MESSAGES: Record<string, Messages> = {
       toastP30: '컨텍스트 파싱 30%',
       toastP60: '추론 안정화 60%',
       toastDone: '출력 완료',
+    },
+    page404: {
+      title: 'Page Not Found',
+      description: 'Sorry, the page you visited does not exist or has been moved.',
+      backToHome: 'Back to Home',
     },
   },
   es: {
@@ -347,6 +366,11 @@ export const DEFAULT_MESSAGES: Record<string, Messages> = {
       toastP60: 'inferencia estable 60%',
       toastDone: 'salida finalizada',
     },
+    page404: {
+      title: 'Page Not Found',
+      description: 'Sorry, the page you visited does not exist or has been moved.',
+      backToHome: 'Back to Home',
+    },
   },
   zh: {
     siteTitle: 'Angle Feint',
@@ -415,6 +439,11 @@ export const DEFAULT_MESSAGES: Record<string, Messages> = {
       toastP30: '语境解析 30%',
       toastP60: '推理稳定 60%',
       toastDone: '输出完成',
+    },
+    page404: {
+      title: '页面未找到',
+      description: '抱歉，您访问的页面不存在或已被移动。',
+      backToHome: '返回首页',
     },
   },
 };

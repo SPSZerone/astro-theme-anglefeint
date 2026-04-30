@@ -22,6 +22,10 @@
         "packages/theme/src/utils/*",
         "node_modules/@anglefeint/astro-theme/src/utils/*"
       ],
+      "@anglefeint/astro-theme/*": [
+        "packages/theme/src/*",
+        "node_modules/@anglefeint/astro-theme/src/*"
+      ],
       "@/*": ["src/*"],
       "@spscommon/*": ["sps/common/src/*"],
       "@spscustom/*": ["sps/custom/src/*"]
