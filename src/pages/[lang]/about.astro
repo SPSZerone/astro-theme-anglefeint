@@ -14,6 +14,7 @@ import {
 } from '../../i18n/config';
 import { getMessages } from '../../i18n/messages';
 import { postsForLocale } from '../../i18n/posts';
+import { SITE_TITLE } from '@/config';
 
 export const getStaticPaths = (async () =>
   THEME.ABOUT_PAGE_ENABLED
@@ -91,7 +92,7 @@ const aboutRuntimeConfig = {
 
 <HackerShell
   locale={locale}
-  title={pageTitle}
+  title=`${messages.nav.about} - ${SITE_TITLE}`
   description={pageDescription}
   bodyClass="hacker-page about-page"
 >

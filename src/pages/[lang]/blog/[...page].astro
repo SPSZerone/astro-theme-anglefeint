@@ -18,6 +18,7 @@ import {
 import { getMessages } from '../../../i18n/messages';
 import { BLOG_PAGE_SIZE, postsForLocale } from '../../../i18n/posts';
 import { buildPaginationModel } from '@anglefeint/astro-theme/utils/pagination';
+import HackerShell from '@anglefeint/astro-theme/layouts/shells/HackerShell.astro';
 
 export const getStaticPaths = (async () => {
   const all = await getCollection('blog');
@@ -87,7 +88,7 @@ const pageDescription =
 
 <CyberShell
   locale={resolvedLocale}
-  title={pageTitle}
+  title=`${messages.nav.blog} - ${SITE_TITLE}`
   description={pageDescription}
   localeHrefs={localeHrefs}
 >
@@ -102,8 +103,9 @@ const pageDescription =
       {
         posts.map((post, index) => (
           <li>
-            <a href={localePath(resolvedLocale, `/blog/${blogIdToSlugAnyLocale(post.id)}`)}
-               class="tiks-success tiks-hover"
+            <a
+              href={localePath(resolvedLocale, `/blog/${blogIdToSlugAnyLocale(post.id)}`)}
+              class="tiks-success tiks-hover"
             >
               {post.data.heroImage && (
                 <div class="img-wrapper">
