@@ -18,6 +18,9 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   trailingSlash: isDev ? 'ignore' : 'always',
+  devToolbar: {
+    enabled: false,
+  },
   site: SITE_URL,
   vite: {
     resolve: {
